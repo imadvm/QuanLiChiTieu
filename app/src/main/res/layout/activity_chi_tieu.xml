@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e90ff"
+    tools:context=".activity.ChiTieuActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tbChiTieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_danhmuc"
+        app:navigationIcon="@drawable/ic_left"
+        app:navigationIconTint="@color/white">
+
+        <TextView
+            android:id="@+id/txtTBTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Ví Tiền"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:id="@+id/llChiTieu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbChiTieu"
+        android:background="@drawable/background_radius">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChiTieu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/item_chitieu" />
+    </RelativeLayout>
+</RelativeLayout>
